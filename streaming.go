@@ -25,8 +25,12 @@ type StreamRequest struct {
 }
 
 type StreamParams struct {
-	Keys   string `json:"keys"`
-	Fields string `json:"fields"`
+	Keys      string `json:"keys",omitempty`
+	Symbol    string `json:"symbol",omitempty`
+	Fields    string `json:"fields",omitempty`
+	StartTime string `json:"START_TIME",omitempty`
+	EndTime   string `json:"END_TIME",omitempty`
+	Frequency string `json:"frequency",omitempty`
 }
 
 // NewStreamAuthCommand creates a StreamAuthCommand from a TD Ameritrade UserPrincipal.
